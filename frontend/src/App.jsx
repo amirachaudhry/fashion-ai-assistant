@@ -1,16 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import Wardrobe from '../components/wardrobe'
 
 function App() {
-  const [itemName, setItemName] = useState("")
-  const [wardrobeItems, setWardrobeItemsList] = useState([])
-
-  function addItem(e) {
-    e.preventDefault()
-    console.log(itemName)
-    setWardrobeItemsList([...wardrobeItems, itemName])
-    setItemName("")
-  }
 
   return (
     <>
@@ -19,21 +11,8 @@ function App() {
 
         <p> Create outfit suggestions using clothing you already own.</p>
         <div className="page-layout">
-        <div className="wardrobe-section">
-          <h3>My Wardrobe</h3>
-          <form className="wardrobe-form" onSubmit={addItem}>
-            <input className="wardrobe-input" type='text' placeholder="Enter clothing item" value={itemName} onChange={(e) => setItemName(e.target.value)} />
-            
-            <button className="item-submit" type='submit'>Add Item</button>
-          </form>
-          <ul className="wardrobe-list">
-            {wardrobeItems.map((item,index) => (
-              <li className="wardrobe-item" key={index}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Wardrobe/>
+        
 
 
         <div className="outfit-generator">
