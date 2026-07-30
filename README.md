@@ -1,1 +1,1 @@
-# fashion-ai-assistant-
+# fashion-ai-assistant
