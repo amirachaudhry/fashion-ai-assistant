@@ -18,17 +18,19 @@ function App() {
         <h1>StyleMatch AI</h1>
 
         <p> Create outfit suggestions using clothing you already own.</p>
-
-        <div className="wardrobe-section" onSubmit={addItem}>
+        <div className="page-layout">
+        <div className="wardrobe-section">
           <h3>My Wardrobe</h3>
-          <form className="wardrobe-form">
-            <input type='text' placeholder="Enter clothing item" value={itemName} onChange={(e) => setItemName(e.target.value)} />
+          <form className="wardrobe-form" onSubmit={addItem}>
+            <input className="wardrobe-input" type='text' placeholder="Enter clothing item" value={itemName} onChange={(e) => setItemName(e.target.value)} />
             
-            <button type='submit'>Add Item</button>
+            <button className="item-submit" type='submit'>Add Item</button>
           </form>
-          <ul>
-            {wardrobeItems.map((item, index) => (
-              <li key={index}>{item}</li>
+          <ul className="wardrobe-list">
+            {wardrobeItems.map((item,index) => (
+              <li className="wardrobe-item" key={index}>
+                {item}
+              </li>
             ))}
           </ul>
         </div>
@@ -36,6 +38,7 @@ function App() {
 
         <div className="outfit-generator">
           <h3>Outfit Generator</h3>
+        </div>
         </div>
 
       </main>
