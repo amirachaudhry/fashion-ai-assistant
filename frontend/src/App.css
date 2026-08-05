@@ -3,28 +3,11 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.wardrobe-section{
-  background-color: #92baa2;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-h1,h3,p,ul {
+h1,
+h3,
+p,
+ul {
   color: grey;
-}
-
-.item-submit {
-  background-color: #ffffff;
-  color: #92baa2;
-  margin-left: 10px;
-}
-
-.wardrobe-input {
-  background-color: #ffffff;
-
-  padding: 5px;
-  border-radius: 4px;
-  border: none;
 }
 
 ul {
@@ -35,9 +18,4 @@ ul {
 
 input {
   color: #000000;
-}
-
-.wardrobe-item {
-  background-color: #ffffff;
-  margin: 10px 0;
 }

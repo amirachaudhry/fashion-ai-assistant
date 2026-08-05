@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import "../css/Wardrobe.css"
 
 const wardrobe = () => {
 
@@ -13,20 +14,21 @@ const wardrobe = () => {
   }
   return (
     <div className="wardrobe-section">
-          <h3>My Wardrobe</h3>
-          <form className="wardrobe-form" onSubmit={addItem}>
-            <input className="wardrobe-input" type='text' placeholder="Enter clothing item" value={itemName} onChange={(e) => setItemName(e.target.value)} />
-            
-            <button className="item-submit" type='submit'>Add Item</button>
-          </form>
-          <ul className="wardrobe-list">
-            {wardrobeItems.map((item,index) => (
-              <li className="wardrobe-item" key={index}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <h3>My Wardrobe</h3>
+      <form className="wardrobe-form" onSubmit={addItem}>
+        <input className="wardrobe-input" type='text' placeholder="Enter clothing item" value={itemName} onChange={(e) => setItemName(e.target.value)} />
+
+        <button className="item-submit" type='submit'>Add Item</button>
+      </form>
+      <ul className="wardrobe-list">
+        {wardrobeItems.length === 0 ? <p>No items in your wardrobe</p> : null}
+        {wardrobeItems.map((item, index) => (
+          <li className="wardrobe-item" key={index}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
