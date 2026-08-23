@@ -2,6 +2,7 @@
     background-color: #ffffff;
     color: #92baa2;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .item-remove {
@@ -15,7 +16,10 @@
     border: 2px solid #000000;
 }
 
-
+.wardrobe-list {
+    max-height: 450px;
+    overflow-y: auto;
+}
 
 .wardrobe-input {
     background-color: #ffffff;

@@ -1,0 +1,21 @@
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.outfit-generator-select {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.outfit-generator-select {
+    background-color: #92baa2;
+}
+
+.outfit-generator-select option {
+    background-color: #92baa2;
+    color: #333;
+}
