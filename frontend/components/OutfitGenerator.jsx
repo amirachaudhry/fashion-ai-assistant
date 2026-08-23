@@ -9,8 +9,7 @@ const OutfitGenerator = ({ wardrobeItems }) => {
     return (
         <div className="outfit-component">
             <h3>Outfit Generator</h3>
-            <p>Choose your occasion and style to generate an outfit suggestion.</p>
-
+            <p className='description'>Choose your occasion and style to generate an outfit suggestion.</p>
             <label className="form-label" htmlFor="occasion">Occasion:</label>
             <select className="outfit-generator-select" id="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)}>
                 <option value="">Select an occasion</option>

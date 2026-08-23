@@ -1,38 +1,48 @@
 .item-submit {
-    background-color: #ffffff;
-    color: #92baa2;
-    margin-left: 10px;
-    cursor: pointer;
+  background-color: #ffffff;
+  height: 40px;
+  width: 100px;
+  color: #000000;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
 }
 
 .item-remove {
-    background-color: red;
-    cursor: pointer;
-    border: 2px solid red;
-    padding: 5px 10px;
+  background-color: red;
+  cursor: pointer;
+  border: 2px solid red;
+  padding: 5px 10px;
 }
 
 .item-remove:hover {
-    border: 2px solid #000000;
+  border: 2px solid #000000;
 }
 
 .wardrobe-list {
-    max-height: 450px;
-    overflow-y: auto;
+  max-height: 450px;
+  overflow-y: auto;
 }
 
 .wardrobe-input {
-    background-color: #ffffff;
-    padding: 5px;
-    border-radius: 4px;
-    border: none;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+}
+
+input {
+  width: 250px;
+  height: 30px;
+  font-size: 16px;
 }
 
 .wardrobe-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ffffff;
-    margin: 10px 0;
-    padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  margin: 10px 0;
+  padding: 8px 10px;
 }
