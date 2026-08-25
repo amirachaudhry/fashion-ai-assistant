@@ -35,6 +35,12 @@ function App() {
           </div>
         )}
 
+        <div className="suggestion-container">
+          <h3>Suggested Outfit:</h3>
+          <p>{suggestion || "No suggestion available."}</p>
+        </div>
+
+
       </main>
     </>
   )

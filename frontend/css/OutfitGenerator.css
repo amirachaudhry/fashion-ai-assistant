@@ -45,3 +45,7 @@ h3 {
   background-color: #92baa2;
   color: #000000;
 }
+
+.outfit-generator-button:active {
+  background-color: #5f8f73;
+}
