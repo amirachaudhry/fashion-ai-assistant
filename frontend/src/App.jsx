@@ -28,12 +28,6 @@ function App() {
           </div>
         </div>
 
-        {suggestion && (
-          <div className="suggestion-container">
-            <h3>Suggested Outfit:</h3>
-            <p>{suggestion}</p>
-          </div>
-        )}
 
         <div className="suggestion-container">
           <h3>Suggested Outfit:</h3>
