@@ -5,7 +5,7 @@ import Nav from '../../components/Nav'
 import Wardrobe from '../../components/Wardrobe'
 import OutfitGenerator from '../../components/OutfitGenerator'
 
-const MainPage = ({ wardrobeItems, setWardrobeItems, suggestion, setSuggestion }) => {
+const MainPage = ({ wardrobeItems, setWardrobeItems, suggestion, setSuggestion, setSavedSuggestions }) => {
 
     return (
         <main className="App">
@@ -33,6 +33,22 @@ const MainPage = ({ wardrobeItems, setWardrobeItems, suggestion, setSuggestion }
             <div className="suggestion-container">
                 <h3>Suggested Outfit:</h3>
                 <p>{suggestion || 'No suggestion available.'}</p>
+                {suggestion && (
+                    <button onClick={() => setSuggestion('')} className="clear-suggestion-button">
+                        Clear Suggestion
+                    </button>
+                )}
+                {suggestion && (
+                    <button
+                        onClick={() => {
+                            setSavedSuggestions((currentSuggestions) => [...currentSuggestions, suggestion])
+                            setSuggestion('')
+                        }}
+                        className="save-suggestion-button"
+                    >
+                        Save Suggestion
+                    </button>
+                )}
             </div>
         </main>
     )

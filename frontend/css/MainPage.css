@@ -54,6 +54,28 @@ input {
     background-color: #f9f9f9;
 }
 
+.clear-suggestion-button,
+.save-suggestion-button {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px 18px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.clear-suggestion-button {
+    background-color: #f6c28b;
+    color: #000000;
+}
+
+.save-suggestion-button {
+    background-color: #ffacfb;
+    color: #000000;
+}
 
 .suggestion-container p {
     white-space: pre-line;
