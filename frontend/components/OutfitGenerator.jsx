@@ -1,10 +1,25 @@
 import { useState } from 'react'
 import "../css/OutfitGenerator.css"
-const OutfitGenerator = ({ wardrobeItems }) => {
+const OutfitGenerator = ({ wardrobeItems, setSuggestion }) => {
 
     const [occasion, setOccasion] = useState("")
     const [style, setStyle] = useState("")
-    const [suggestion, setSuggestion] = useState("")
+
+    const generateOutfit = async () => {
+        const response = await fetch('http://localhost:5000/api/generate-outfit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                wardrobeItems,
+                occasion,
+                style
+            })
+        });
+        const data = await response.json();
+        setSuggestion(data.suggestion);
+    };
 
     return (
         <div className="outfit-component">
@@ -28,9 +43,8 @@ const OutfitGenerator = ({ wardrobeItems }) => {
                 <option value="sporty">Sporty</option>
             </select>
 
-            <button className="outfit-generator-button" onClick={() => {
-                // Placeholder for outfit suggestion logic
-            }}>Generate Outfit</button>
+            <button onClick={generateOutfit} className="outfit-generator-button">Generate Outfit</button>
+
         </div>
     )
 }
