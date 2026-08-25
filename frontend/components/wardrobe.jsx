@@ -1,23 +1,23 @@
 import { useState } from 'react'
-import "../css/wardrobe.css"
+import "../css/Wardrobe.css"
 
-const Wardrobe = () => {
+const Wardrobe = ({ wardrobeItems, setWardrobeItems }) => {
 
   const [itemName, setItemName] = useState("")
-  const [wardrobeItems, setWardrobeItemsList] = useState([])
 
   function addItem(e) {
     e.preventDefault()
     console.log(itemName)
-    setWardrobeItemsList([...wardrobeItems, itemName])
+    setWardrobeItems([...wardrobeItems, itemName])
     setItemName("")
   }
 
   function removeItem(index) {
     const newWardrobeItems = [...wardrobeItems]
     newWardrobeItems.splice(index, 1)
-    setWardrobeItemsList(newWardrobeItems)
+    setWardrobeItems(newWardrobeItems)
   }
+
   return (
     <div className="wardrobe-component">
       <h3>My Wardrobe</h3>
@@ -26,6 +26,7 @@ const Wardrobe = () => {
 
         <button className="item-submit" type='submit'>Add Item</button>
       </form>
+
       <ul className="wardrobe-list">
         {wardrobeItems.length === 0 ?
           (<p>No items in your wardrobe</p>)

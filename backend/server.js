@@ -37,13 +37,20 @@ app.get('/', (req, res) => {
 // })
 
 app.post('/api/generate-outfit', async (req, res) => {
-    const { wardrobeItems, occasion, stylePreferences } = req.body;
+    const { wardrobeItems, occasion, style } = req.body;
 
     try {
         const prompt =
-            `Generate an outfit based on ONLY these wardrobe items: ${wardrobeItems.join(', ')}
+            `Generate one outfit based on ONLY these wardrobe items: ${wardrobeItems.join(', ')}
         The occasion is: ${occasion}. 
-        The style preferences are: ${stylePreferences}. Give a short outfit suggestion and explain why it works.`;
+        The style preferences are: ${style}. 
+        
+        Reply in this exact format:
+
+        Outfit: item + item + item
+        Why: one short sentence
+
+        Keep the whole response under 40 words.`;
 
         const response = await ai.models.generateContent({
             model: "gemini-3.6-flash",
